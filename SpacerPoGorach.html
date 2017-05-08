@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<title>STOS - System Testowania i Oceny zada&#324; Studenckich</title>
+<link rel="stylesheet" type="text/css" href="./stos.css" >
+<script type="text/javascript" src="./clock.js"></script></head><body onload="RunClock()">
+<div id="shadow">
+	<div class="shbordl">
+		</div>
+	<div class="shbordr">
+		<div class="corr">
+			<div class="bgbr5"></div>
+			<div class="shbr2"></div><div class="bgbr3"></div>
+			<div class="shbr3"></div><div class="bgbr2"></div>
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			</div>
+		</div>
+	<div id="shadowfill"></div>
+	<div class="shbordl">
+		<div class="corl">
+			<div class="bgbr1"></div><div class="shbr4"></div>
+			<div class="bgbr1"></div><div class="shbr4"></div>
+			<div class="bgbr2"></div><div class="shbr3"></div>
+			<div class="bgbr3"></div><div class="shbr2"></div>
+			<div class="bgbr5"></div>
+			</div>
+		</div>
+	<div class="shbordr">
+		<div class="corr">
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			<div class="shbr3"></div><div class="bgbr2"></div>
+			<div class="shbr2"></div><div class="bgbr3"></div>
+			<div class="bgbr5"></div>
+			</div>
+		</div>
+	</div><!-- shadow -->
+
+<div id="panel">
+	<div class="bordl">
+		<div class="corl">
+			<div class="bgbr5"></div>
+			<div class="bgbr3"></div><div class="mnbr2"></div>
+			<div class="bgbr2"></div><div class="mnbr3"></div>
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			</div>
+		<div class="corr">
+			<div class="cnbr5"></div>
+			<div class="mnbr2"></div><div class="cnbr3"></div>
+			<div class="mnbr3"></div><div class="cnbr2"></div>
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			</div>
+		</div>
+	<div class="bordr">
+		<div class="corr">
+			<div class="bgbr5"></div>
+			<div class="cnbr2"></div><div class="bgbr3"></div>
+			<div class="cnbr3"></div><div class="bgbr2"></div>
+			<div class="cnbr4"></div><div class="bgbr1"></div>
+			<div class="cnbr4"></div><div class="bgbr1"></div>
+			</div>
+		</div>
+	<div id="leftmenu">
+					<span class="menuitem" onClick="window.location = './index.php?p=index'"><a href="./index.php?p=index">Strona g&#322;&oacute;wna</a></span><span class="menuitem" onClick="window.location = './index.php?p=help'"><a href="./index.php?p=help">Pomoc</a></span><span class="menuitem" onClick="window.location = './index.php?p=logout'"><a href="./index.php?p=logout">Wylogowanie</a></span><span class="menusep">&nbsp;</span><span class="menuitem" onClick="window.location = './index.php?p=przedmioty'"><a href="./index.php?p=przedmioty">Przedmioty</a></span><span class="menusep">&nbsp;</span><span class="menuitem" onClick="window.location = './index.php?p=passwordchangeform'"><a href="./index.php?p=passwordchangeform">Zmiana has&#322;a</a></span><span class="menusep">&nbsp;</span><span class="menusep">&nbsp;</span>		<div class="menublock">
+			Czas: <span id="ctime">17:08:20</span>			</div>
+		</div> <!-- leftmenu -->
+	<div id="content">
+		&nbsp;&nbsp;<span class="menuitemh" onClick="window.location = 'index.php?p=viewprzedmiot&amp;id=84'"><a href="index.php?p=viewprzedmiot&amp;id=84">Przedmiot</a></span><span class="menuitemh" onClick="window.location = 'index.php?p=show&amp;id=348'"><a href="index.php?p=show&amp;id=348"><b>Tre&#347;&#263;</b></a></span><span class="menuitemh" onClick="window.location = 'index.php?p=submit&amp;id=348'"><a href="index.php?p=submit&amp;id=348">Zg&#322;aszanie</a></span><span class="menuitemh" onClick="window.location = 'index.php?p=status&amp;probid=348'"><a href="index.php?p=status&amp;probid=348">Wynik</a></span><span class="menuitemh" onClick="window.location = './viewcode.php?id=14006'"><a href="./viewcode.php?id=14006">Kod zg&#322;oszenia</a></span><br><br>
+<h2>Spacer po górach</h2>
+Celem zadania jest znalezienie najkrótszej trasy przez dany teren. Teren podzielony
+jest na pola. Każde pole ma pewną wysokość, wyrażoną nieujemną liczbą całkowitą.
+Przejście na pole o wysokości A z pola o wysokości B zajmuje:<br>
+A - B + 1 minut, jeżeli A > B,<br>
+1 minutę, jeżeli A ≤ B.<br>
+Możemy przechodzić tylko na pola sąsiadujące ze sobą jednym z boków, czyli z danego
+pola możemy przejść na co najwyżej cztery sąsiednie. Nie możemy opuścić terenu
+opisanego przez mapę.<br>
+<br>
+W obszarze może znajdować się pewna liczba wyciągów. Wyciąg umożliwia
+dotarcie z jego punktu startowego wyciągu do punktu docelowego wyciągu (jest
+jednokierunkowy). Skorzystanie z wyciągu zajmuje pewną liczbę minut. Dodatkowo,
+wyciągi kursują w określonych minutach -- jeżeli znajdujemy się w polu startowym
+wyciągu w minucie 8 i wiemy, że punktem docelowym wyciągu jest (12, 12), kursuje
+on co 5 minut i skorzystanie z niego zajmuje 3 minuty, to w punkcie (12, 12) będziemy
+w 13 minucie (13 = 8 + 2 + 3; 2 minuty oczekiwania plus trzy minuty jazdy).<br>
+<br>
+Rozwiązanie zadania nie wymaga korzystania z liczb przekraczających zakres typu int.<br>
+
+<h3>Wejście</h3>
+Na wejściu podane będą kolejno:
+<ul>
+<li>szerokość i wysokość mapy</li>
+<li>pozycja startowa (kolumna i wiersz)</li>
+<li>pozycja docelowa (kolumna i wiersz)</li>
+<li>liczba wyciągów</li>
+<li>opis wyciągów – dla każdego wyciągu kolejno:
+<ul>
+<li>pozycja startowa (kolumna i wiersz),</li>
+<li>pozycja docelowa (kolumna i wiersz),</li>
+<li>czas trwania podróży w minutach,</li>
+<li>minuty odjazdu – z wyciągu można skorzystać w minutach będących wielokrotnością tej wartości,</li>
+</ul></li>
+<li>wysokości kolejnych pól mapy.</li>
+</ul>
+Wszystkie wartości są nieujemne.
+
+<h3>Wyjście</h3>
+Na wyjście należy wypisać najkrótszy czas, jaki potrzebny jest na dotarcie z punktu
+startowego do punktu docelowego.
+
+<h3>Przykład</h3>
+<pre>
+<b>Wejście</b>
+9 8 0 0 8 7 0
+0 0 0 0 0 0 0 0 8 
+0 9 9 9 9 9 9 9 0 
+0 1 0 1 0 0 0 9 0 
+0 9 0 0 0 1 0 9 0 
+0 9 1 1 1 1 0 9 0 
+0 9 0 0 0 0 0 9 0 
+0 9 9 9 9 1 9 9 0 
+8 0 0 0 0 0 0 0 0 
+
+
+<b>Wyjście</b>
+18
+
+<b>Wejście</b>
+9 9 0 0 8 8 5
+0 1 2 0 5 2
+0 1 2 0 1 3
+2 0 4 0 3 7
+4 1 8 8 20 11
+4 2 8 8 10 12
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+0 9 0 9 0 9 0 9 0
+
+<b>Wyjście</b>
+22
+</pre>
+Komentarz do drugiego testu:<br>
+Robimy krok w dół (1 minuta). Tu mamy do dyspozycji dwa wyciągi, jeden odchodzi co 2 minuty, drugi co 3. Wybieramy ten drugi, i choć czekamy
+dłużej (2 minuty), do w (2, 0) będziemy szybciej – w 4. minucie. Tu czekamy kolejne 3 minuty na wyciąg do (4, 0) i docieramy tam
+w 10. minucie. Robimy dwa kroki w dół do (4, 2). Docieramy tam w 12 minucie, wsiadamy do wyciągu i w (8, 8) jesteśmy po 22 minutach.
+
+<h3>Testy</h3>
+<a href="https://kaims.pl/~kmocet/files/aisd/proj2015/aisd15.zip">Tutaj</a>.<br>
+Numeracja jest przesunięta o jeden w stosunku do tego, co jest prezentowane przez system.
+Testy 0-10 – poprawnościowe (50%).
+Testy 11-15 – wydajnościowe (30%).
+Testy 16-19 – obsługa wyciągów (20%).
+<br>
+<br>
+		</div><!-- content -->
+	<div class="bordl">
+		<div class="corl">
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			<div class="bgbr2"></div><div class="mnbr3"></div>
+			<div class="bgbr3"></div><div class="mnbr2"></div>
+			<div class="bgbr5"></div>
+			</div>
+		<div class="corr">
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			<div class="mnbr3"></div><div class="cnbr2"></div>
+			<div class="mnbr2"></div><div class="cnbr3"></div>
+			<div class="cnbr5"></div>
+			</div>
+		</div>
+	<div class="bordr">
+		<div class="corr">
+			<div class="cnbr4"></div><div class="shbr1"></div>
+			<div class="cnbr4"></div><div class="shbr1"></div>
+			<div class="cnbr3"></div><div class="shbr2"></div>
+			<div class="cnbr2"></div><div class="shbr3"></div>
+			<div class="shbr5"></div>
+			</div>
+		</div>
+	</div><!-- panel -->
+</body>
+</html>

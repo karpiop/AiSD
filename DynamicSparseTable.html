@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<title>STOS - System Testowania i Oceny zada&#324; Studenckich</title>
+<link rel="stylesheet" type="text/css" href="./stos.css" >
+<script type="text/javascript" src="./clock.js"></script></head><body onload="RunClock()">
+<div id="shadow">
+	<div class="shbordl">
+		</div>
+	<div class="shbordr">
+		<div class="corr">
+			<div class="bgbr5"></div>
+			<div class="shbr2"></div><div class="bgbr3"></div>
+			<div class="shbr3"></div><div class="bgbr2"></div>
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			</div>
+		</div>
+	<div id="shadowfill"></div>
+	<div class="shbordl">
+		<div class="corl">
+			<div class="bgbr1"></div><div class="shbr4"></div>
+			<div class="bgbr1"></div><div class="shbr4"></div>
+			<div class="bgbr2"></div><div class="shbr3"></div>
+			<div class="bgbr3"></div><div class="shbr2"></div>
+			<div class="bgbr5"></div>
+			</div>
+		</div>
+	<div class="shbordr">
+		<div class="corr">
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			<div class="shbr4"></div><div class="bgbr1"></div>
+			<div class="shbr3"></div><div class="bgbr2"></div>
+			<div class="shbr2"></div><div class="bgbr3"></div>
+			<div class="bgbr5"></div>
+			</div>
+		</div>
+	</div><!-- shadow -->
+
+<div id="panel">
+	<div class="bordl">
+		<div class="corl">
+			<div class="bgbr5"></div>
+			<div class="bgbr3"></div><div class="mnbr2"></div>
+			<div class="bgbr2"></div><div class="mnbr3"></div>
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			</div>
+		<div class="corr">
+			<div class="cnbr5"></div>
+			<div class="mnbr2"></div><div class="cnbr3"></div>
+			<div class="mnbr3"></div><div class="cnbr2"></div>
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			</div>
+		</div>
+	<div class="bordr">
+		<div class="corr">
+			<div class="bgbr5"></div>
+			<div class="cnbr2"></div><div class="bgbr3"></div>
+			<div class="cnbr3"></div><div class="bgbr2"></div>
+			<div class="cnbr4"></div><div class="bgbr1"></div>
+			<div class="cnbr4"></div><div class="bgbr1"></div>
+			</div>
+		</div>
+	<div id="leftmenu">
+					<span class="menuitem" onClick="window.location = './index.php?p=index'"><a href="./index.php?p=index">Strona g&#322;&oacute;wna</a></span><span class="menuitem" onClick="window.location = './index.php?p=help'"><a href="./index.php?p=help">Pomoc</a></span><span class="menuitem" onClick="window.location = './index.php?p=logout'"><a href="./index.php?p=logout">Wylogowanie</a></span><span class="menusep">&nbsp;</span><span class="menuitem" onClick="window.location = './index.php?p=przedmioty'"><a href="./index.php?p=przedmioty">Przedmioty</a></span><span class="menusep">&nbsp;</span><span class="menuitem" onClick="window.location = './index.php?p=passwordchangeform'"><a href="./index.php?p=passwordchangeform">Zmiana has&#322;a</a></span><span class="menusep">&nbsp;</span><span class="menusep">&nbsp;</span>		<div class="menublock">
+			Czas: <span id="ctime">17:07:04</span>			</div>
+		</div> <!-- leftmenu -->
+	<div id="content">
+		&nbsp;&nbsp;<span class="menuitemh" onClick="window.location = 'index.php?p=viewprzedmiot&amp;id=84'"><a href="index.php?p=viewprzedmiot&amp;id=84">Przedmiot</a></span><span class="menuitemh" onClick="window.location = 'index.php?p=show&amp;id=358'"><a href="index.php?p=show&amp;id=358"><b>Tre&#347;&#263;</b></a></span><span class="menuitemh" onClick="window.location = 'index.php?p=submit&amp;id=358'"><a href="index.php?p=submit&amp;id=358">Zg&#322;aszanie</a></span><span class="menuitemh" onClick="window.location = 'index.php?p=status&amp;probid=358'"><a href="index.php?p=status&amp;probid=358">Wynik</a></span><span class="menuitemh" onClick="window.location = './viewcode.php?id=16454'"><a href="./viewcode.php?id=16454">Kod zg&#322;oszenia</a></span><br><br>
+<h2>Dynamic sparse table</h2>
+W celu przechowywania wartości indeksowanych rzadkimi kluczami z pewnego uniwersum N dobrym rozwiązaniem wydają się być tablice haszowane. Minusem ich zastosowania może być kiepski czas dostępu w pesymistycznym przypadku. Innym sposobem poradzenia sobie z tym zadaniem jest zastosowanie drzewa trie, które charakteryzuje się lepszym oszacowaniem przypadku pesymistycznego. <br/><br/>
+W naszym zadaniu drzewo trie opisane jest dwoma parametrami: n i k. Budowane jest w następujący sposób: korzeń zawiera n węzłów potomnych a każdy węzeł potomny posiada kolejne k węzłów potomnych. Wstawianie klucza x zaczynamy od korzenia i jeśli jest on wolny (każdy węzeł przechowuje maksymalnie jeden klucz  i ewentualnie skojarzoną z nią wartość – w naszym przypadku będzie to jedynie klucz) to zapisujemy wstawianą wartość do węzła i kończymy operację. W przypadku kiedy korzeń jest już zajęty szukamy dla niego miejsca wybierając kolejny węzeł potomny równy div = x mod n a następnie div = div mod k, aż natrafimy na wolne miejsce. Wyszukiwanie wykonujemy analogicznie  rozpoczynając od korzenia i przeglądając kolejne węzły o indeksach mod n a następnie mod k aż do znalezienia wartości x albo trafienia na pusty węzeł potomny (brak klucza w drzewie). Kasowanie jest trochę trudniejsze i wymaga  odszukania węzła p z daną wartością klucza oraz, w przypadku kiedy jest to węzeł wewnętrzny, kandydata do skasowania. Kandydata q możemy wyszukiwać na różne sposoby jednakże zawsze musi to być węzeł zewnętrzny (nie posiadający potomstwa). My zastosujemy prostą strategię szukania zawsze na lewo. Jeśli znajdziemy kandydata to przepisujemy wartość w miejsce usuwanego klucza x w węźle p i usuwamy węzeł q. <br/><br/>
+Więcej informacji na
+<a href="http://i.stanford.edu/pub/cstr/reports/cs/tr/78/683/CS-TR-78-683.pdf">Storing a sparse table </a>.
+
+<h3>Wejście</h3>
+Pierwszy wiersz zawiera liczbę n określającą liczbę przypadków testowych (komendy I, L, D oraz P – wstaw, wyszukaj, usuń i przeglądaj), każdy w nowej linii. W kolejnym wierszu podane zostaną dwie liczby minimum i maksimum określające jak wielkie liczby mogą pojawić się na wejściu. W kolejnym wierszu kolejne dwie liczby to parametry n i k naszego drzewa trie. Następnie, po pustej linii wystąpi n przypadków testowych, o których była mowa na początku. Komenda:
+<ul><li>I x – powoduje wstawienie klucza x do drzewa. Jeśli już taki tam się znajduje to wypisuje jedynie informację x exist, w przeciwnym wypadku niczego nie wypisuje.</li>
+<li>L x – wyświetla informację x exist w przypadku odszukania klucza oraz x not exist w przeciwnym przypadku.</li>
+<li>D x – kasuje klucz x z drzewa. W przypadku niepowodzenia (brak klucza) wypisuje informację: x not exist. W przypadku poprawnego wstawienia do drzewa niczego nie wyświetla. Do skasowania wybierany jest potomny węzeł zewnętrzny położony najbardziej po lewej węzła zawierającego klucz x  albo węzeł zawierający x – jeśli nie posiada on potomków.</li>
+<li>P – wyświetla zawartość drzewa w kolejności  inorder. Jeżeli podczas operacji kasowania (D x) nie będzie wybierany pierwszy węzeł potomny najbardziej po lewej, będący węzłem zewnętrznym, to kształt drzewa będzie się różnił, co wpłynie na kolejność inorder i ostatecznie na wynik.</li></ul>
+<h3>Wyjście</h3>
+Kolejne linie zawierające informacje będące rezultatem użycia komend (I, L, D, P) albo brak linii w przypadku braku takiej informacji (w przypadku poprawnego dodania bądź skasowania x).
+
+<h3>Przykład</h3>
+<pre>
+<b>Wejście</b>
+29
+0 511
+8 4
+
+I 3
+I 31
+I 150
+I 190
+I 130
+I 174
+I 81
+I 30
+I 203
+P
+L 32
+L 30
+L 150
+D 150
+L 150
+I 150
+L 150
+D 3
+L 3
+I 3
+L 3
+D 3
+L 3
+D 30
+L 30
+I 30
+L 30
+D 30
+L 30
+
+<b>Wyjście</b>
+3 81 130 203 150 174 190 30 31 
+32 not exist
+30 exist
+150 exist
+150 not exist
+150 exist
+3 not exist
+3 exist
+3 not exist
+30 not exist
+30 exist
+30 not exist
+
+<h3>Testy</h3>
+<a href="https://kaims.pl/~goluch/lab/tests/DST/1.zip">1</a>,<a href="https://kaims.pl/~goluch/lab/tests/DST/2.zip">2</a>,<a href="https://kaims.pl/~goluch/lab/tests/DST/3.zip">3</a>,<a href="https://kaims.pl/~goluch/lab/tests/DST/4.zip">4</a>.
+</pre>
+		</div><!-- content -->
+	<div class="bordl">
+		<div class="corl">
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			<div class="bgbr1"></div><div class="mnbr4"></div>
+			<div class="bgbr2"></div><div class="mnbr3"></div>
+			<div class="bgbr3"></div><div class="mnbr2"></div>
+			<div class="bgbr5"></div>
+			</div>
+		<div class="corr">
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			<div class="mnbr4"></div><div class="cnbr1"></div>
+			<div class="mnbr3"></div><div class="cnbr2"></div>
+			<div class="mnbr2"></div><div class="cnbr3"></div>
+			<div class="cnbr5"></div>
+			</div>
+		</div>
+	<div class="bordr">
+		<div class="corr">
+			<div class="cnbr4"></div><div class="shbr1"></div>
+			<div class="cnbr4"></div><div class="shbr1"></div>
+			<div class="cnbr3"></div><div class="shbr2"></div>
+			<div class="cnbr2"></div><div class="shbr3"></div>
+			<div class="shbr5"></div>
+			</div>
+		</div>
+	</div><!-- panel -->
+</body>
+</html>
